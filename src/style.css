@@ -1,0 +1,105 @@
+.container {
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  width: 900px;
+}
+
+.col-3,
+.col-2 {
+  display: block;
+  border: 0;
+  background-color: rgb(243, 243, 243);
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.coming-hours,
+.coming-days {
+  width: auto;
+  padding: 20px 5px;
+}
+
+.search-input {
+  display: block;
+  text-align: center;
+}
+
+.card-header {
+  text-align: center;
+  font-size: 12px;
+  border: 0;
+  background-color: aliceblue;
+}
+
+.header-date {
+  color: black;
+  margin: 0;
+}
+
+.city-selected {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.current-hour {
+  font-weight: 700;
+}
+
+.coming-hours .col-3 .card-text {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.coming-hours .col-3 .card-body {
+  color: rgb(255, 255, 255);
+}
+
+.col-3 {
+  background-color: rgb(0, 68, 255);
+  border: 1px solid rgb(0, 68, 255);
+}
+
+.col-3:hover {
+  background-color: rgb(243, 243, 243);
+  border: 1px solid rgb(0, 68, 255);
+}
+
+.coming-hours .col-3 .card-body:hover {
+  color: rgb(0, 0, 0);
+}
+
+.col-2 {
+  font-weight: 700;
+}
+
+.col-2 .card-title {
+  color: rgb(75, 75, 75);
+  font-size: 12px;
+}
+
+.col-2 .card-text {
+  color: rgb(0, 68, 255);
+  font-size: 16px;
+}
+
+hr {
+  color: rgb(192, 185, 255);
+}
+
+.button-current-location {
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid rgb(230, 230, 230);
+  color: rgb(0, 68, 255);
+  border-radius: 5px;
+  font-size: 12px;
+  transition: all 200ms ease-in-out;
+}
+
+.button-current-location:hover {
+  cursor: pointer;
+  background-color: rgb(0, 68, 255);
+  color: white;
+}
