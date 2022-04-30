@@ -23,39 +23,62 @@
     <div class="container">
       <div class="card">
         <div class="card-header">
-          <p class="header-date">Saturday, March 5th 2022</p>
+          <div class="search-input">
+        <div class="row">
+          <div class="col-sm-6">
+          <form id="search-city">
+            <input
+              type="text"
+              class="search"
+              placeholder="Enter a city name"
+              autofocus="on"
+              id="search-text-input"
+            />
+            <input type="submit" value="🔍" id="button-input" />
+          </form>
+          </div>
+          <div class="col-sm-6">
+            <button type="button" class="button-current-location">
+            📍 Use my location
+            </button>
+            </div>
+            </div>
+            </div>
+          </div>
         </div>
 
         <div class="card-body">
           <div class="row">
+            <div class="col-sm-12"></div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
-              <div class="city-selected" id="city-name">
-                <h5>City Name</h5>
-              </div>
-              <div class="search-input">
-                <form id="search-city">
-                  <input
-                    type="text"
-                    class="search"
-                    placeholder="Enter a city name"
-                    autofocus="on"
-                    id="search-text-input"
+              <div class="clearfix">
+                <div class="city-selected" id="city-name">
+                  <h5>City Name</h5>
+                  <p class="date">Saturday, March 5th 2022</p>
+                  <div class="float-left">
+                    <p>12°C | °F</p>
+                  </div>
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="cloudy"
+                    class="float-left"
                   />
-                  <input type="submit" value="🔍" id="button-input" />
-                </form>
-                <div>
-                  <button type="button" class="button-current-location">
-                    Current Location
-                  </button>
                 </div>
               </div>
+              
+                
+              </div>
             </div>
-            <div class="col-sm-6">
-              <ul>
-                <li>Precipiation : 0%</li>
-                <li>Humidity : 73%</li>
-                <li>Wind : 2km/h</li>
-              </ul>
+            <div class="col-sm-6" id="weather-specs">
+              <div class="float-left">
+                <ul>
+                  <li>Precipiation : 0%</li>
+                  <li>Humidity : 73%</li>
+                  <li>Wind : 2km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
 

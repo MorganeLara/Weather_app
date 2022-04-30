@@ -21,27 +21,34 @@
 }
 
 .search-input {
+  margin: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+#search-city {
   display: block;
-  text-align: center;
+  text-align: left;
+  padding: 10px;
 }
 
 .card-header {
   text-align: center;
+  padding: 0;
   font-size: 12px;
   border: 0;
   background-color: aliceblue;
 }
 
-.header-date {
+.date {
   color: black;
+  font-size: 12px;
   margin: 0;
 }
 
 .city-selected {
   display: block;
   text-align: left;
-  margin-top: 10px;
-  margin-left: 10px;
 }
 
 .current-hour {
@@ -90,10 +97,12 @@ hr {
 }
 
 .button-current-location {
-  margin: 10px;
+  margin: 10px 0px;
   padding: 5px 10px;
-  background-color: white;
-  border: 1px solid rgb(230, 230, 230);
+  display: block;
+  text-align: left;
+  background-color: transparent;
+  border: 0px solid;
   color: rgb(0, 68, 255);
   border-radius: 5px;
   font-size: 12px;
@@ -110,4 +119,10 @@ hr {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+#weather-specs {
+  padding: 50px 10px 0px 10px;
+  list-style-type: none;
+  color: rgb(109, 109, 109);
 }
