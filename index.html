@@ -25,25 +25,37 @@
         <div class="card-header">
           <p class="header-date">Saturday, March 5th 2022</p>
         </div>
-        <div class="city-selected" id="city-name">
-          <h5>Select a city</h5>
-        </div>
+
         <div class="card-body">
-          <div class="search-input">
-            <form id="search-city">
-              <input
-                type="text"
-                class="search"
-                placeholder="Enter a city name"
-                autofocus="on"
-                id="search-text-input"
-              />
-              <input type="submit" value="🔍" id="button-input" />
-            </form>
-            <div>
-              <button type="button" class="button-current-location">
-                Current Location
-              </button>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="city-selected" id="city-name">
+                <h5>City Name</h5>
+              </div>
+              <div class="search-input">
+                <form id="search-city">
+                  <input
+                    type="text"
+                    class="search"
+                    placeholder="Enter a city name"
+                    autofocus="on"
+                    id="search-text-input"
+                  />
+                  <input type="submit" value="🔍" id="button-input" />
+                </form>
+                <div>
+                  <button type="button" class="button-current-location">
+                    Current Location
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <ul>
+                <li>Precipiation : 0%</li>
+                <li>Humidity : 73%</li>
+                <li>Wind : 2km/h</li>
+              </ul>
             </div>
           </div>
 
