@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheCodes</title>
+    <title>Weather App</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,148 +16,113 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="src/style.css" />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather App</title>
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="card-header">
-          <div class="search-input">
-        <div class="row">
-          <div class="col-sm-6">
+      <div class="card-header">
+        <div class="row" id="search-input">
+          <div class="col-9" >
           <form id="search-city">
             <input
-              type="text"
-              class="search"
-              placeholder="Enter a city name"
-              autofocus="on"
+              type="search"
+              class="form-control"
+              placeholder="Type a city..."
+              autofocus="off"
               id="search-text-input"
             />
-            <input type="submit" value="🔍" id="button-input" />
+            </div>
+             <div class="col-3">
+            <input type="submit" value="🔍" id="btn btn-primary w-100" />
+            </div>
           </form>
-          </div>
-          <div class="col-sm-6">
-            <button type="button" class="button-current-location">
+          <button type="button" class="button-current-location">
             📍 Use my location
-            </button>
-            </div>
-            </div>
-            </div>
-          </div>
+          </button>
         </div>
+      </div>
 
-        <div class="card-body">
-          <div class="row">
-            <div class="col-sm-12"></div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <div class="clearfix">
-                <div class="city-selected" id="city-name">
-                  <h5>City Name</h5>
-                  <p class="date">Saturday, March 5th 2022</p>
-                  <div class="float-left">
-                    <p>12°C | °F</p>
-                  </div>
-                  <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                    alt="cloudy"
-                    class="float-left"
-                  />
-                </div>
-              </div>
-              
-                
-              </div>
+      <div class="card-body" id="current-weather">
+        <div class="row">
+          <div class="col-6" style="overflow: hidden">
+            <div class="city-selected">
+              <p class="date"></p>
+              <h5 class="city-name" id="city"></h5>
+              <small id="description"></small>
             </div>
-            <div class="col-sm-6" id="weather-specs">
-              <div class="float-left">
-                <ul>
-                  <li>Precipiation : 0%</li>
-                  <li>Humidity : 73%</li>
-                  <li>Wind : 2km/h</li>
-                </ul>
+            <div class="clearfix weather-temperature" style="float: left">
+              <img
+                src=""
+                alt="weather-icon"
+                style="float: left"
+                id="icon"
+              />
+              <div class="temperature" style="float: left">
+                <strong id="temperature"></strong>
+                <button class="unit">°C</button>|<button class="unit">
+                  °F
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="row coming-hours">
-            <div class="card col-3">
-              <div class="card-body">
-                <h6 class="card-title">
-                  Currently, <span class="current-hour"> 5:45pm</span>
-                </h6>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">6pm</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">7pm</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">8pm</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">9pm</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-          </div>
-
-          <hr />
-
-          <div class="row coming-days">
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">Sunday, 6th</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">Monday, 7th</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">Tuesday, 8th</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">Wednesday, 9th</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
-            </div>
-            <div class="card col-2">
-              <div class="card-body">
-                <p class="card-title">Thursday, 10th</p>
-                <p class="card-temp">22°C 🌥</p>
-              </div>
+          <div class="col-6">
+            <div class="weather-specs">
+            <ul>
+              <li>☔️ Precipitation: <span id="precipitation"></span>%</li>
+              <li>☁️ Humidity: <span id="humidity"></span>%</li>
+              <li>🍃 Wind: <span id="wind"></span> m/h</li>
+            </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <!---
+       <div class="weather-forecast">
+        <div class="row coming-hours">
+          <div class="card col-2">
+            <div class="card-body" id="forecast">
+              <p class="card-title">6pm</p>
+              <p class="card-temp">22°C 🌥</p>
+            </div>
+          </div>
+
+          <div class="card col-2">
+            <div class="card-body">
+              <p class="card-title">7pm</p>
+              <p class="card-temp">22°C 🌥</p>
+            </div>
+          </div>
+
+          <div class="card col-2">
+            <div class="card-body">
+              <p class="card-title">8pm</p>
+              <p class="card-temp">22°C 🌥</p>
+            </div>
+          </div>
+
+          <div class="card col-2">
+            <div class="card-body">
+              <p class="card-title">9pm</p>
+              <p class="card-temp">22°C 🌥</p>
+            </div>
+          </div>
+
+          <div class="card col-2">
+            <div class="card-body">
+              <p class="card-title">10pm</p>
+              <p class="card-temp">22°C 🌥</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      --->
     </div>
+
     <div class="credits">
       <p>
         <a href="https://github.com/MorganeLara/Weather_app" target="_blank"

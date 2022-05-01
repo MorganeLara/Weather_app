@@ -1,107 +1,14 @@
-.container {
-  margin: 20px auto;
-  font-family: "Poppins", sans-serif;
-  width: 900px;
-  filter: drop-shadow(0px 0px 5px #e7e7e7);
-}
-
-.col-3,
-.col-2 {
-  display: block;
-  border: 0;
-  background-color: rgb(243, 243, 243);
-  margin: 0 auto;
-  padding: 5px;
-}
-
-.coming-hours,
-.coming-days {
-  width: auto;
-  padding: 20px 5px;
-}
-
-.search-input {
-  margin: 10px;
-  text-align: left;
-  font-size: 14px;
-}
-
-#search-city {
-  display: block;
-  text-align: left;
-  padding: 10px;
-}
-
-.card-header {
-  text-align: center;
-  padding: 0;
-  font-size: 12px;
-  border: 0;
-  background-color: aliceblue;
-}
-
-.date {
-  color: black;
-  font-size: 12px;
-  margin: 0;
-}
-
-.city-selected {
-  display: block;
-  text-align: left;
-}
-
-.current-hour {
-  font-weight: 700;
-}
-
-.coming-hours .col-3 .card-text {
-  font-size: 26px;
-  font-weight: 600;
-}
-
-.coming-hours .col-3 .card-body {
-  color: rgb(255, 255, 255);
-}
-
-.col-3 {
-  background-color: rgb(0, 68, 255);
-  border: 1px solid rgb(0, 68, 255);
-}
-
-.col-3:hover {
-  background-color: rgb(243, 243, 243);
-  border: 1px solid rgb(0, 68, 255);
-}
-
-.coming-hours .col-3 .card-body:hover {
-  color: rgb(0, 0, 0);
-}
-
-.col-2 {
-  font-weight: 700;
-}
-
-.col-2 .card-title {
-  color: rgb(75, 75, 75);
-  font-size: 12px;
-}
-
-.col-2 .card-text {
-  color: rgb(0, 68, 255);
-  font-size: 16px;
-}
-
-hr {
-  color: rgb(192, 185, 255);
+.body {
+  font-family: arial, sans-serif;
 }
 
 .button-current-location {
-  margin: 10px 0px;
+  margin: 10px 10px;
   padding: 5px 10px;
   display: block;
+  width: 140px;
   text-align: left;
-  background-color: transparent;
+  background-color: aliceblue;
   border: 0px solid;
   color: rgb(0, 68, 255);
   border-radius: 5px;
@@ -115,14 +22,155 @@ hr {
   color: white;
 }
 
+#current-weather {
+  background-color: aliceblue;
+  position: relative;
+}
+
+#forecast {
+  background-color: transparent;
+}
+
+.card-header {
+  text-align: center;
+  display: block;
+  width: auto;
+  padding: 10px 20px;
+  font-size: 12px;
+  background-color: transparent;
+}
+
+.city-selected {
+  display: block;
+  text-align: left;
+}
+
+.row .coming-hours {
+  width: auto;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 0px;
+  font-family: "Poppins", sans-serif;
+  max-width: 500px;
+  background-color: white;
+  filter: drop-shadow(0px 0px 5px #e7e7e7);
+}
+
+.col-2 {
+  display: inline-block;
+  border: 0;
+  font-weight: 700;
+  background-color: transparent;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.col-2:hover {
+  font-weight: 700;
+  background-color: aliceblue;
+}
+
+.col-2 .card-title {
+  color: rgb(75, 75, 75);
+  font-size: 12px;
+}
+
+.col-2 .card-temp {
+  color: rgb(0, 68, 255);
+  font-size: 16px;
+  display: inline-block;
+  margin: 0;
+}
+
+.col-3 {
+  align-self: center;
+}
+
 .credits {
   display: block;
   margin: 0 auto;
   text-align: center;
 }
 
-#weather-specs {
-  padding: 50px 10px 0px 10px;
-  list-style-type: none;
-  color: rgb(109, 109, 109);
+.current-hour {
+  font-weight: 700;
+}
+
+.date {
+  color: black;
+  font-size: 12px;
+  margin: 0;
+}
+
+hr {
+  color: rgb(179, 179, 179);
+  margin: 0;
+}
+
+#search-city {
+  display: block;
+  text-align: left;
+}
+
+#search-input {
+  text-align: left;
+  font-size: 14px;
+  position: relative;
+}
+
+.weather-forecast {
+  margin: 0px 20px;
+}
+
+.unit {
+  background-color: transparent;
+  border: 0px solid;
+}
+
+.unit:hover {
+  color: rgb(0, 68, 255);
+}
+
+.weather-forecast {
+  margin: 10px 20px;
+}
+
+.weather-temperature strong {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.weather-temperature img {
+  margin-right: 5px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-specs {
+  position: absolute;
+  bottom: 15px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
 }
