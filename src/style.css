@@ -3,12 +3,12 @@
 }
 
 .button-current-location {
-  margin: 10px 10px;
+  margin: 10px 12px;
   padding: 5px 10px;
   display: block;
   width: 140px;
   text-align: left;
-  background-color: aliceblue;
+  background-color: white;
   border: 0px solid;
   color: rgb(0, 68, 255);
   border-radius: 5px;
@@ -23,7 +23,7 @@
 }
 
 #current-weather {
-  background-color: aliceblue;
+  background-color: white;
   position: relative;
 }
 
@@ -37,7 +37,7 @@
   width: auto;
   padding: 10px 20px;
   font-size: 12px;
-  background-color: transparent;
+  background-color: aliceblue;
 }
 
 .city-selected {
@@ -90,6 +90,7 @@
 
 .credits {
   display: block;
+  font-size: 12px;
   margin: 0 auto;
   text-align: center;
 }

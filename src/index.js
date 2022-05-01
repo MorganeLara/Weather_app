@@ -50,7 +50,8 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
-  let precipitationElement = document.querySelector("#precipitation");
+  let temp_minElement = document.querySelector("#temp_min");
+  let temp_maxElement = document.querySelector("#temp_max");
   let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
@@ -59,13 +60,13 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
-  precipitationElement.innerHTML = response.data.main.pricipiation;
+  temp_minElement.innerHTML = Math.round(response.data.main.temp_min);
+  temp_maxElement.innerHTML = Math.round(response.data.main.temp_max);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.data.weather[0].description);
 
   function showLocation(position) {
     let apiKey = "5dbcef116299e239c6fa8aa6bc960ebc";
@@ -82,3 +83,5 @@ function displayTemperature(response) {
   let currentButton = document.querySelector(".button-current-location");
   currentButton.addEventListener("click", displayLocation);
 }
+
+searchCity("Brussels");
