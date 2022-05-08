@@ -85,3 +85,13 @@ function displayTemperature(response) {
 }
 
 searchCity("Brussels");
+
+//function displayFahrenheitTemperature(event) {
+//event.preventDefault();
+//let fahrenheitTemperature = (14 * 9) / 5 + 32;
+//alert("Link clicked");
+//alert(fahrenheitTemperature);
+//}
+
+//let fahrenheitLink = document.querySelector("fahrenheit-link");
+//fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
