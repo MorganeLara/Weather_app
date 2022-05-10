@@ -90,7 +90,7 @@
 
 .credits {
   display: block;
-  font-size: 12px;
+  font-size: 10px;
   margin: 0 auto;
   text-align: center;
 }
@@ -121,17 +121,14 @@ hr {
   position: relative;
 }
 
-.weather-forecast {
-  margin: 0px 20px;
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
 }
 
-.unit {
-  background-color: transparent;
-  border: 0px solid;
-}
-
-.unit:hover {
-  color: rgb(0, 68, 255);
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
 
 .weather-forecast {
