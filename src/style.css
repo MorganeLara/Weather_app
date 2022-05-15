@@ -2,8 +2,33 @@
   font-family: arial, sans-serif;
 }
 
+hr {
+  color: rgb(179, 179, 179);
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  color: rgb(135, 135, 135);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .button-current-location {
-  margin: 10px 12px;
+  margin: 15px 10px 5px 12px;
   padding: 5px 10px;
   display: block;
   width: 140px;
@@ -22,15 +47,6 @@
   color: white;
 }
 
-#current-weather {
-  background-color: white;
-  position: relative;
-}
-
-#forecast {
-  background-color: transparent;
-}
-
 .card-header {
   text-align: center;
   display: block;
@@ -45,8 +61,20 @@
   text-align: left;
 }
 
-.row .coming-hours {
-  width: auto;
+.col-2 {
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+  margin: 10px 0px;
+}
+
+.col-2:hover {
+  font-weight: 700;
+  background-color: aliceblue;
+}
+
+.col-3 {
+  align-self: center;
 }
 
 .container {
@@ -56,36 +84,6 @@
   max-width: 500px;
   background-color: white;
   filter: drop-shadow(0px 0px 5px #e7e7e7);
-}
-
-.col-2 {
-  display: inline-block;
-  border: 0;
-  font-weight: 700;
-  background-color: transparent;
-  margin: 10px auto;
-  padding: 5px;
-}
-
-.col-2:hover {
-  font-weight: 700;
-  background-color: aliceblue;
-}
-
-.col-2 .card-title {
-  color: rgb(75, 75, 75);
-  font-size: 12px;
-}
-
-.col-2 .card-temp {
-  color: rgb(0, 68, 255);
-  font-size: 16px;
-  display: inline-block;
-  margin: 0;
-}
-
-.col-3 {
-  align-self: center;
 }
 
 .credits {
@@ -99,15 +97,19 @@
   font-weight: 700;
 }
 
+#current-weather {
+  background-color: white;
+  position: relative;
+}
+
 .date {
   color: black;
   font-size: 12px;
   margin: 0;
 }
 
-hr {
-  color: rgb(179, 179, 179);
-  margin: 0;
+.row .coming-days {
+  margin: 0px;
 }
 
 #search-city {
@@ -121,6 +123,42 @@ hr {
   position: relative;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.weather-forecast {
+  margin: 5px 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  color: rgb(75, 75, 75);
+  font-size: 12px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.weather-forecast-temp {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  width: max-content;
+  color: grey;
+}
+
+.weather-forecast-temp-min {
+  opacity: 0.6;
+}
+
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
@@ -129,10 +167,6 @@ hr {
 
 .weather-temperature .active:hover {
   text-decoration: none;
-}
-
-.weather-forecast {
-  margin: 10px 20px;
 }
 
 .weather-temperature strong {
@@ -151,24 +185,4 @@ hr {
 .weather-specs {
   position: absolute;
   bottom: 15px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  color: rgb(135, 135, 135);
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 30px;
-}
-
-li:first-letter {
-  text-transform: capitalize;
 }

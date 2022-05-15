@@ -23,6 +23,7 @@
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="card-header">
         <div class="row" id="search-input">
           <div class="col-9" >
@@ -63,7 +64,7 @@
               <div class="temperature" style="float: left">
                 <strong id="temperature"></strong>
                 <span class="units">
-                  <a href="#" id="celsius-link" class="active">°C</a>|<a href="#" id="fahrenheit-link"> F°</a>
+                  <a href="#" id="celsius-link" class="active">°C</a> | <a href="#" id="fahrenheit-link"> F°</a>
                 </span>
               </div>
             </div>
@@ -74,54 +75,21 @@
             <ul>
               <li>🌡 Min/Max. Temp: <span id="temp_min"></span>°/<span id="temp_max"></span>°</li>
               <li>☁️ Humidity: <span id="humidity"></span>%</li>
-              <li>🍃 Wind: <span id="wind"></span> m/h</li>
+              <li>🍃 Wind: <span id="wind"></span> km/h</li>
             </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <!---
-       <div class="weather-forecast">
-        <div class="row coming-hours">
-          <div class="card col-2">
-            <div class="card-body" id="forecast">
-              <p class="card-title">6pm</p>
-              <p class="card-temp">22°C 🌥</p>
-            </div>
-          </div>
+      <hr/>
 
-          <div class="card col-2">
-            <div class="card-body">
-              <p class="card-title">7pm</p>
-              <p class="card-temp">22°C 🌥</p>
-            </div>
-          </div>
-
-          <div class="card col-2">
-            <div class="card-body">
-              <p class="card-title">8pm</p>
-              <p class="card-temp">22°C 🌥</p>
-            </div>
-          </div>
-
-          <div class="card col-2">
-            <div class="card-body">
-              <p class="card-title">9pm</p>
-              <p class="card-temp">22°C 🌥</p>
-            </div>
-          </div>
-
-          <div class="card col-2">
-            <div class="card-body">
-              <p class="card-title">10pm</p>
-              <p class="card-temp">22°C 🌥</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      --->
+    <div>
+        <div class="weather-forecast" id="forecast"></div>
     </div>
+    </div>
+    </div>
+
 
     <div class="credits">
       <p>
