@@ -76,6 +76,7 @@ function getForecast(coordinates) {
 }
 
 function searchCity(city) {
+  units = "metric";
   let apiKey = "4ae86e02efa11f6104c128d0198748d6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
@@ -90,9 +91,6 @@ function submit(event) {
   let city = document.querySelector("#search-text-input").value;
   searchCity(city);
 }
-
-let searchForm = document.querySelector("#search-city");
-searchForm.addEventListener("submit", submit);
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -120,6 +118,9 @@ function displayTemperature(response) {
 
   getForecast(response.data.coord);
 
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
   function showLocation(position) {
     let apiKey = "5dbcef116299e239c6fa8aa6bc960ebc";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -131,7 +132,6 @@ function displayTemperature(response) {
     event.preventDefault();
     navigator.geolocation.getCurrentPosition(showLocation);
   }
-
   let currentButton = document.querySelector(".button-current-location");
   currentButton.addEventListener("click", displayLocation);
 }
@@ -156,6 +156,9 @@ function displayCelsiusTemperature(event) {
 
 let celsiusTemperature = null;
 
+let searchForm = document.querySelector("#search-city");
+searchForm.addEventListener("submit", submit);
+
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
@@ -163,4 +166,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 showCurrentTime();
+
 searchCity("Brussels");
